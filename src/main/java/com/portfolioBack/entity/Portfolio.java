@@ -5,9 +5,9 @@ import lombok.Data;
 
 
 @Entity
-@Table(name = "portfolio")
+@Table(name = "Portfolio")
 @Data
-public class portfolio {
+public class Portfolio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -19,7 +19,7 @@ public class portfolio {
     @Column(name = "imageUrl")
     private String imageUrl;
     @ManyToOne
-    @JoinColumn(name = "category_id",nullable = false)
+    @JoinColumn(name = "imageCategory_id",nullable = false)
     private ImageCategory category;
 
 }

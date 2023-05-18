@@ -19,6 +19,6 @@ public class ImageCategory {
     @Column(name = "image_name")
     private String imageName;
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "category")
-    private Set<portfolio> portfolio;
+    private Set<Portfolio> portfolio;
 
 }

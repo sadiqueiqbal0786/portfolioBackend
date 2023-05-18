@@ -2,7 +2,7 @@ package com.portfolioBack.config;
 
 
 import com.portfolioBack.entity.ImageCategory;
-import com.portfolioBack.entity.portfolio;
+import com.portfolioBack.entity.Portfolio;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.metamodel.EntityType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
 
         //disable http method for product to make it read only
         config.getExposureConfiguration()
-                .forDomainType(portfolio.class)
+                .forDomainType(Portfolio.class)
                 .withItemExposure(((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions)))
                 .withCollectionExposure(((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions)));
 
